@@ -11,7 +11,7 @@ namespace ConsoleClient
         {
 
             Console.WriteLine("Hello World!");
-            Console.WriteLine("翟超到此一游");
+            Console.WriteLine("翟超到此一游"   );
         }
     }
 }
