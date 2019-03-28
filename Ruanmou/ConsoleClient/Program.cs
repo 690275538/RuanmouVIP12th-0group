@@ -10,7 +10,7 @@ namespace ConsoleClient
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello World");
+            Console.WriteLine("Hello World!");
             Console.WriteLine("翟超到此一游");
         }
     }
