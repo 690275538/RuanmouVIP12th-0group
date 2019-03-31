@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ruanmou.Model
 {
-    public class Class1
+    public interface IBaseModel
     {
     }
 }
