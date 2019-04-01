@@ -51,16 +51,16 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ruanmou.DAL\Ruanmou.DAL.csproj">
-      <Project>{e42bd7cc-0fb9-4390-ba00-63e7f86d0a1b}</Project>
-      <Name>Ruanmou.DAL</Name>
+    <ProjectReference Include="..\Factory\Factory.csproj">
+      <Project>{bfd9745d-d9ac-406d-9a5e-4b8d7c863d93}</Project>
+      <Name>Factory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ruanmou.IDAL\Ruanmou.IDAL.csproj">
-      <Project>{328f70ae-3f20-44f9-83ef-75bd4e863220}</Project>
+      <Project>{328F70AE-3F20-44F9-83EF-75BD4E863220}</Project>
       <Name>Ruanmou.IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ruanmou.Model\Ruanmou.Model.csproj">
-      <Project>{aaecd8c4-3ff2-483a-ae27-2438b5525d61}</Project>
+      <Project>{AAECD8C4-3FF2-483A-AE27-2438B5525D61}</Project>
       <Name>Ruanmou.Model</Name>
     </ProjectReference>
   </ItemGroup>
