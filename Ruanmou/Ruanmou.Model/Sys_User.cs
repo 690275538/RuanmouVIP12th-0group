@@ -22,11 +22,12 @@ namespace Ruanmou.Model
 		/// 真实姓名
 		/// </summary>
 		public string  RealName { get; set;}
-		
-		/// <summary>
-		/// 昵称
-		/// </summary>
-		public string  NickName { get; set;}
+
+        /// <summary>
+        /// 昵称
+        /// </summary>
+        [ModelDbColumnName("NickName")]
+        public string  UserName { get; set;}
 		
 		/// <summary>
 		/// 性别
