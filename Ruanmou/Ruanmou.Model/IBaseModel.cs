@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Ruanmou.Model
 {
-    public interface IBaseModel
+    public class BaseModel
     {
     }
-    public class Sys_User: IBaseModel
+    public class Sys_User: BaseModel
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// 账号
         /// </summary>
@@ -27,7 +27,8 @@ namespace Ruanmou.Model
         /// <summary>
         /// 昵称
         /// </summary>
-        public string NickName { get; set; }
+         [ModelDbColumnName("NickName")]
+        public string UserName { get; set; }
         /// <summary>
         /// 性别
         /// </summary>

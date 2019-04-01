@@ -20,31 +20,47 @@ namespace Ruanmou.DAL
             Connection = conn;
             ConnectionString = connString;
         }
+        /// <summary>
+        /// 通过sql查询，返回实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="queryString"></param>
+        /// <returns></returns>
         public IEnumerable<T> Query<T>(string queryString)
         {
             Type t = typeof(T);
             List<T> list = new List<T>();
-
-            if (Connection == null)
-            {
-                throw new NullReferenceException(nameof(Connection));
-            }
             if (Connection == null && !string.IsNullOrWhiteSpace(ConnectionString))
             {
                 Connection = new SqlConnection(ConnectionString);
+            }
+            if (Connection == null)
+            {
+                throw new NullReferenceException(nameof(Connection));
             }
             SqlCommand cmd = new SqlCommand(queryString, Connection);
             Connection.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             try
             {
+                foreach (var prop in t.GetProperties())
+                {
+                    
+                }
                 while (reader.Read())
                 {
                     var instanceT = Activator.CreateInstance<T>();
-                    foreach (var property in t.GetProperties())
+                    for (int i = 0; i < reader.FieldCount; i++)
                     {
-                        property.SetValue(instanceT, reader[property.Name] is DBNull ? null : reader[property.Name]);
+                        if ()
+                        {
+                            
+                        }
+                        var prop = t.GetProperty(reader.GetName(i));
+                        prop?.SetValue(instanceT, reader[i] is DBNull ? null : reader[i]);
                     }
+
+
                     list.Add(instanceT);
                 }
 
