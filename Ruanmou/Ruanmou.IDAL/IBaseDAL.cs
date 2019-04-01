@@ -1,4 +1,4 @@
-﻿using Ruanmou.Model;
+using Ruanmou.Model;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
@@ -6,8 +6,6 @@ namespace Ruanmou.IDAL
 {
     public interface IBaseDAL
     {
-        IEnumerable<T> IQuery<T>();
-
         #region 根据主键crud
         bool Add<T>(T t) where T : BaseModel;
         T Find<T>(int id) where T : BaseModel;
@@ -35,5 +33,6 @@ namespace Ruanmou.IDAL
         /// <returns></returns>
         bool Delete<T>(Expression expressionWhere);
         #endregion
+        IEnumerable<T> Query<T>(string queryString);
     }
 }
