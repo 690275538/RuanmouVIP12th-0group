@@ -1,5 +1,4 @@
-﻿using Ruanmou.DAL.EntityMappingExtend;
-using Ruanmou.Model;
+﻿using Ruanmou.Model;
 using System;
 using System.Collections.Generic;
 using System.Reflection;

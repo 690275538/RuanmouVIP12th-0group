@@ -26,7 +26,7 @@ namespace Ruanmou.Model
         /// <summary>
         /// 昵称
         /// </summary>
-        [ModelDbColumnName("NickName")]
+        [EntityMapping("NickName")]
         public string  UserName { get; set;}
 		
 		/// <summary>
