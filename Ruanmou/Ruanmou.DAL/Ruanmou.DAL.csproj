@@ -44,7 +44,6 @@
     <Compile Include="BaseDAL.cs" />
     <Compile Include="EntityMappingExtend\EntityMappingAttribute.cs" />
     <Compile Include="ExpressionVisitorLib\ConditionBuilderVisitor.cs" />
-    <Compile Include="SqlMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlBuilder.cs" />
     <Compile Include="DBExtend\SqlOperator.cs" />
